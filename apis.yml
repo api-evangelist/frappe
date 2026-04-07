@@ -10,11 +10,11 @@ created: '2025-02-06'
 modified: '2026-03-16'
 position: Consumer
 tags:
-  - Software
-  - ERP
   - Accounting
+  - ERP
   - Inventory
   - Payroll
+  - Software
 url: >-
   https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/apis.yml
 specificationVersion: '0.19'
@@ -22,11 +22,11 @@ apis:
   - aid: frappe:frappe
     name: Frappe
     tags:
-      - Software
-      - ERP
       - Accounting
+      - ERP
       - Inventory
       - Payroll
+      - Software
     humanURL: https://docs.frappe.io/framework/user/en/introduction
     properties:
       - url: https://docs.frappe.io/framework/user/en/introduction
