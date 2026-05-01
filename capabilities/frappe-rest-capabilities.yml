@@ -1,0 +1,69 @@
+aid: frappe:rest-capabilities
+name: Frappe Framework REST API Capabilities
+description: >-
+  Capability map for the Frappe Framework REST API covering generic
+  document CRUD operations, remote method calls, file uploads, and
+  authentication flows used by Frappe and ERPNext applications.
+modified: '2026-04-28'
+capabilities:
+  - id: document-list
+    name: Document List
+    description: >-
+      List documents of a given DocType with filters, field projection,
+      ordering, and pagination.
+    operations:
+      - GET /api/resource/{doctype}
+  - id: document-create
+    name: Document Create
+    description: >-
+      Create a new document of a given DocType with a JSON body conforming
+      to the DocType schema.
+    operations:
+      - POST /api/resource/{doctype}
+  - id: document-read
+    name: Document Read
+    description: >-
+      Retrieve a single document by DocType and name, optionally expanding
+      linked records.
+    operations:
+      - GET /api/resource/{doctype}/{name}
+  - id: document-update
+    name: Document Update
+    description: >-
+      Partially or fully update a document of a given DocType identified by
+      name.
+    operations:
+      - PUT /api/resource/{doctype}/{name}
+  - id: document-delete
+    name: Document Delete
+    description: >-
+      Delete a document of a given DocType identified by name.
+    operations:
+      - DELETE /api/resource/{doctype}/{name}
+  - id: method-call
+    name: Whitelisted Method Call
+    description: >-
+      Call any whitelisted Python method registered in the Frappe app via
+      its dotted method path.
+    operations:
+      - GET /api/method/{method_path}
+      - POST /api/method/{method_path}
+  - id: file-upload
+    name: File Upload
+    description: >-
+      Upload a binary file using multipart form data; returns a File
+      document reference.
+    operations:
+      - POST /api/method/upload_file
+  - id: login
+    name: Password Login
+    description: >-
+      Authenticate via username and password; subsequent requests carry the
+      session cookie.
+    operations:
+      - POST /api/method/login
+  - id: logout
+    name: Logout
+    description: Invalidate the current session.
+    operations:
+      - POST /api/method/logout

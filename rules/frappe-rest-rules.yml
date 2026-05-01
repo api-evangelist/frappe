@@ -1,0 +1,74 @@
+aid: frappe:rest-rules
+name: Frappe Framework REST API Operational Rules
+description: >-
+  Operational rules for working with the Frappe Framework REST API including
+  authentication options, filtering syntax, pagination, and common pitfalls.
+modified: '2026-04-28'
+rules:
+  - id: authentication-required
+    title: Authentication Required
+    description: >-
+      All resource and method endpoints require authentication via API key
+      and secret token, OAuth bearer token, or session cookie established
+      through password login.
+    severity: required
+  - id: token-format
+    title: Token Authorization Format
+    description: >-
+      For token-based auth use the header
+      "Authorization: token api_key:api_secret" exactly as shown; the colon
+      separator is required.
+    severity: required
+  - id: oauth-bearer
+    title: OAuth Bearer Token
+    description: >-
+      For OAuth flows use "Authorization: Bearer access_token". Do not mix
+      bearer and token schemes on the same request.
+    severity: required
+  - id: filter-syntax
+    title: Filter Syntax
+    description: >-
+      Filters and or_filters parameters expect a JSON-encoded list of
+      [fieldname, operator, value] tuples. URL-encode the JSON before
+      sending.
+    severity: required
+  - id: pagination-limits
+    title: Pagination Defaults
+    description: >-
+      List endpoints default to a small page size; use limit_start and
+      limit_page_length to page through large result sets explicitly.
+    severity: recommended
+  - id: field-projection
+    title: Field Projection
+    description: >-
+      Default list responses include only name and limited fields; use the
+      fields parameter to project required attributes and reduce payload
+      size.
+    severity: recommended
+  - id: doctype-permissions
+    title: DocType Permissions
+    description: >-
+      Access to a DocType depends on the role permissions configured in the
+      system; expect 403 for unauthorized DocType access even with valid
+      credentials.
+    severity: required
+  - id: whitelist-required
+    title: Whitelisted Methods Only
+    description: >-
+      Only methods explicitly decorated with @frappe.whitelist() are
+      callable via the /api/method endpoint. Custom methods must be
+      whitelisted to be invoked over HTTP.
+    severity: required
+  - id: csrf-token
+    title: CSRF Token for Cookie Auth
+    description: >-
+      Session-cookie authenticated POST/PUT/DELETE calls require a valid
+      X-Frappe-CSRF-Token header retrieved from the boot info or login
+      response.
+    severity: required
+  - id: debug-flag
+    title: Debug Flag in Production
+    description: >-
+      Avoid passing debug=True to production endpoints; it can expose
+      executed SQL and is intended for development environments only.
+    severity: required

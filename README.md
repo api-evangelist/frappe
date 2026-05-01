@@ -1,44 +1,54 @@
 # Frappe (frappe)
-Our flagship products are our web framework Frappe which is a fully featured, low code framework, and the world's best free and open source ERP ERPNext. ERPNext helps companies from tiny startups to large enterprises and public bodies manage their operations from financial accounting, inventory management to payroll. Along with ERPNext we have built several other products on top of our framework and we continue to build more.
 
-
+Frappe is a fully featured, low-code web framework written in Python and JavaScript that powers ERPNext, the open-source ERP for accounting, inventory, payroll, and operations. The Frappe REST API auto-exposes every DocType for CRUD plus whitelisted Python method calls.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Software, ERP, Accounting, Inventory, Payroll
+- Open Source, ERP, Accounting, Inventory, Payroll, Low Code
 
 ## Timestamps
 
-- **Created:** 2025-02-06 
-- **Modified:** 2025-04-07 
+- **Created:** 2025-02-06
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Frappe
-Our flagship products are our web framework Frappe which is a fully featured, low code framework, and the world's best free and open source ERP ERPNext. ERPNext helps companies from tiny startups to large enterprises and public bodies manage their operations from financial accounting, inventory management to payroll. Along with ERPNext we have built several other products on top of our framework and we continue to build more.
+### Frappe Framework REST API
 
-**Human URL:** [ https://docs.frappe.io/framework/user/en/introduction]( https://docs.frappe.io/framework/user/en/introduction)
+Auto-generated REST API exposing every Frappe DocType for CRUD, filtered list queries, and whitelisted Python method calls. Powers Frappe and ERPNext integrations.
 
+- **Human URL:** https://docs.frappe.io/framework/user/en/api/rest
 
-#### Tags:
+#### Tags
 
- - Software, ERP, Accounting, Inventory, Payroll
+- REST, DocTypes, CRUD, Methods
 
 #### Properties
 
-- [Documentation]( https://docs.frappe.io/framework/user/en/introduction)
+- [Documentation](https://docs.frappe.io/framework/user/en/api/rest)
+- [Framework Documentation](https://docs.frappe.io/framework/user/en/introduction)
+- [Capabilities](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/capabilities/frappe-rest-capabilities.yml)
+- [Rules](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/rules/frappe-rest-rules.yml)
+- [Source Code](https://github.com/frappe/frappe)
+
+## Common Properties
+
+- [Website](https://frappe.io/)
+- [Documentation](https://docs.frappe.io/)
+- [GitHub Organization](https://github.com/frappe)
+- [Frappe Framework Source](https://github.com/frappe/frappe)
+- [ERPNext Source](https://github.com/frappe/erpnext)
 
 ## Maintainers
 
 **FN:** Kin Lane
 
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com
