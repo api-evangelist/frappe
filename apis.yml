@@ -35,6 +35,8 @@ apis:
       - CRUD
       - Methods
     properties:
+      - url: openapi/frappe-openapi.yml
+        type: OpenAPI
       - type: Documentation
         url: https://docs.frappe.io/framework/user/en/api/rest
       - type: Documentation
