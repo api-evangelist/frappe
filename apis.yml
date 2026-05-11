@@ -63,6 +63,11 @@ common:
   - type: SourceCode
     name: ERPNext
     url: https://github.com/frappe/erpnext
+  - type: Integrations
+    url: https://frappe.io/partners
+integrations:
+  - name: Here is what it means.
+  - name: Become a partner
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
