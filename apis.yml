@@ -55,7 +55,7 @@ common:
     url: https://frappe.io/
   - type: Documentation
     url: https://docs.frappe.io/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/frappe
   - type: SourceCode
     name: Frappe Framework
