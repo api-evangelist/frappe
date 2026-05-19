@@ -9,7 +9,7 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-02-06'
-modified: '2026-04-28'
+modified: '2026-05-19'
 position: Consumer
 tags:
   - Open Source
@@ -65,6 +65,9 @@ common:
     url: https://github.com/frappe/erpnext
   - type: Integrations
     url: https://frappe.io/partners
+  - name: MCP Server
+    url: https://github.com/frappe/mcp
+    type: MCPServer
 integrations:
   - name: Here is what it means.
   - name: Become a partner
