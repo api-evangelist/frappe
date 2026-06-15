@@ -1,0 +1,237 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Frappe Framework REST API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Login with username and password",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{site}/api/method/login",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Login with username and password"
+    },
+    {
+      "info": {
+        "name": "Get currently logged-in user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{site}/api/method/frappe.auth.get_logged_user"
+      },
+      "docs": "Get currently logged-in user"
+    },
+    {
+      "info": {
+        "name": "Upload a file",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{site}/api/method/upload_file",
+        "body": {
+          "type": "multipart-form",
+          "data": []
+        }
+      },
+      "docs": "Upload a file"
+    },
+    {
+      "info": {
+        "name": "List documents of a DocType",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{site}/api/resource/:doctype",
+        "params": [
+          {
+            "name": "doctype",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "filters",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "order_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit_start",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit_page_length",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List documents of a DocType"
+    },
+    {
+      "info": {
+        "name": "Create a document of a DocType",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{site}/api/resource/:doctype",
+        "params": [
+          {
+            "name": "doctype",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a document of a DocType"
+    },
+    {
+      "info": {
+        "name": "Read a document by name",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{site}/api/resource/:doctype/:name",
+        "params": [
+          {
+            "name": "doctype",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Read a document by name"
+    },
+    {
+      "info": {
+        "name": "Update a document",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{site}/api/resource/:doctype/:name",
+        "params": [
+          {
+            "name": "doctype",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a document"
+    },
+    {
+      "info": {
+        "name": "Delete a document",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{site}/api/resource/:doctype/:name",
+        "params": [
+          {
+            "name": "doctype",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a document"
+    },
+    {
+      "info": {
+        "name": "Call a whitelisted Python method (read-only)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{site}/api/method/:dotted_path",
+        "params": [
+          {
+            "name": "dotted_path",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Call a whitelisted Python method (read-only)"
+    },
+    {
+      "info": {
+        "name": "Call a whitelisted Python method (state-changing)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{site}/api/method/:dotted_path",
+        "params": [
+          {
+            "name": "dotted_path",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Call a whitelisted Python method (state-changing)"
+    }
+  ],
+  "bundled": true
+}
