@@ -47,6 +47,12 @@ apis:
       - type: SourceCode
         url: https://github.com/frappe/frappe
 common:
+  - type: VulnerabilityDisclosure
+    url: security/frappe-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/frappe-domain-security.yml
+  - type: Authentication
+    url: authentication/frappe-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/frappe-technologies
   - type: Website
@@ -66,6 +72,8 @@ common:
   - name: MCP Server
     url: https://github.com/frappe/mcp
     type: MCPServer
+  - url: https://frappe.io/rss.xml
+    type: Blog
 integrations:
   - name: Here is what it means.
   - name: Become a partner
