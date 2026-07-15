@@ -47,6 +47,8 @@ apis:
       - type: SourceCode
         url: https://github.com/frappe/frappe
 common:
+  - type: AgenticAccess
+    url: agentic-access/frappe-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/frappe-vulnerability-disclosure.yml
   - type: DomainSecurity
