@@ -1,0 +1,119 @@
+openapi: 3.1.0
+info:
+  title: Frappe Framework REST Method API
+  description: Auto-generated REST API exposing every Frappe DocType for CRUD, filtered list queries, and whitelisted Python method calls.
+  version: 1.0.0
+servers:
+- url: https://{site}
+  description: Frappe site base URL
+  variables:
+    site:
+      default: example.frappe.cloud
+      description: Frappe site hostname
+security:
+- apiKey: []
+tags:
+- name: Method
+paths:
+  /api/method/login:
+    post:
+      summary: Login with username and password
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Login response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Method
+  /api/method/frappe.auth.get_logged_user:
+    get:
+      summary: Get currently logged-in user
+      operationId: getLoggedUser
+      responses:
+        '200':
+          description: Logged user response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Method
+  /api/method/upload_file:
+    post:
+      summary: Upload a file
+      operationId: uploadFile
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Upload response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Method
+  /api/method/{dotted_path}:
+    get:
+      summary: Call a whitelisted Python method (read-only)
+      operationId: callMethodGet
+      parameters:
+      - name: dotted_path
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Method response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Method
+    post:
+      summary: Call a whitelisted Python method (state-changing)
+      operationId: callMethodPost
+      parameters:
+      - name: dotted_path
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Method response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Method
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: token <api_key>:<api_secret>
+x-generated-from: https://docs.frappe.io/framework/user/en/api/rest
+x-generated-by: claude-crawl-2026-05-08
