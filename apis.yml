@@ -5,7 +5,20 @@ description: >-
   open-source ERP for accounting, inventory, payroll, and operations. The Frappe REST API auto-exposes every DocType for
   CRUD plus whitelisted Python method calls.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/frappe.png
 access: 3rd-Party
 created: '2025-02-06'
 modified: '2026-05-19'
@@ -20,32 +33,48 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: frappe:rest-api
-    name: Frappe Framework REST API
-    description: >-
-      Auto-generated REST API exposing every Frappe DocType for CRUD, filtered list queries, and whitelisted Python
-      method calls. Powers Frappe and ERPNext integrations.
-    humanURL: https://docs.frappe.io/framework/user/en/api/rest
-    tags:
-      - REST
-      - DocTypes
-      - CRUD
-      - Methods
-    properties:
-      - url: openapi/frappe-openapi.yml
-        type: OpenAPI
-      - type: Documentation
-        url: https://docs.frappe.io/framework/user/en/api/rest
-      - type: Documentation
-        name: Frappe Framework Docs
-        url: https://docs.frappe.io/framework/user/en/introduction
-      - type: Capabilities
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/capabilities/frappe-rest-capabilities.yml
-      - type: Rules
-        url: https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/rules/frappe-rest-rules.yml
-      - type: SourceCode
-        url: https://github.com/frappe/frappe
+- aid: frappe:frappe-method-api
+  name: Frappe Method API
+  description: The Method API from Frappe — 4 operation(s) for method.
+  humanURL: https://docs.frappe.io/framework/user/en/api/rest
+  tags:
+  - Method
+  properties:
+  - type: OpenAPI
+    url: openapi/frappe-method-api-openapi.yml
+  - type: Documentation
+    url: https://docs.frappe.io/framework/user/en/api/rest
+  - type: Documentation
+    url: https://docs.frappe.io/framework/user/en/introduction
+  - type: Capabilities
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/capabilities/frappe-rest-capabilities.yml
+  - type: Rules
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/rules/frappe-rest-rules.yml
+  - type: SourceCode
+    url: https://github.com/frappe/frappe
+- aid: frappe:frappe-resource-api
+  name: Frappe Resource API
+  description: The Resource API from Frappe — 2 operation(s) for resource.
+  humanURL: https://docs.frappe.io/framework/user/en/api/rest
+  tags:
+  - Resource
+  properties:
+  - type: OpenAPI
+    url: openapi/frappe-resource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.frappe.io/framework/user/en/api/rest
+  - type: Documentation
+    url: https://docs.frappe.io/framework/user/en/introduction
+  - type: Capabilities
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/capabilities/frappe-rest-capabilities.yml
+  - type: Rules
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/rules/frappe-rest-rules.yml
+  - type: SourceCode
+    url: https://github.com/frappe/frappe
 common:
   - type: AgenticAccess
     url: agentic-access/frappe-agentic-access.yml
