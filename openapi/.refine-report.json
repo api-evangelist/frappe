@@ -1,0 +1,16 @@
+{
+  "provider": "frappe",
+  "sources": [
+    "frappe-method-api-openapi.yml",
+    "frappe-resource-api-openapi.yml"
+  ],
+  "outputs": [
+    "frappe-method-api-openapi.yml",
+    "frappe-resource-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,238 @@
+openapi: 3.1.0
+info:
+  title: Frappe Framework REST API
+  description: >-
+    Auto-generated REST API exposing every Frappe DocType for CRUD,
+    filtered list queries, and whitelisted Python method calls.
+  version: "1.0.0"
+x-generated-from: https://docs.frappe.io/framework/user/en/api/rest
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://{site}
+    description: Frappe site base URL
+    variables:
+      site:
+        default: example.frappe.cloud
+        description: Frappe site hostname
+paths:
+  /api/method/login:
+    post:
+      summary: Login with username and password
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Login response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/method/frappe.auth.get_logged_user:
+    get:
+      summary: Get currently logged-in user
+      operationId: getLoggedUser
+      responses:
+        '200':
+          description: Logged user response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/method/upload_file:
+    post:
+      summary: Upload a file
+      operationId: uploadFile
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Upload response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/resource/{doctype}:
+    get:
+      summary: List documents of a DocType
+      operationId: listDocuments
+      parameters:
+        - name: doctype
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+        - name: filters
+          in: query
+          schema:
+            type: string
+        - name: order_by
+          in: query
+          schema:
+            type: string
+        - name: limit_start
+          in: query
+          schema:
+            type: integer
+        - name: limit_page_length
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List response
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Create a document of a DocType
+      operationId: createDocument
+      parameters:
+        - name: doctype
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Create response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/resource/{doctype}/{name}:
+    get:
+      summary: Read a document by name
+      operationId: getDocument
+      parameters:
+        - name: doctype
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Document response
+          content:
+            application/json:
+              schema:
+                type: object
+    put:
+      summary: Update a document
+      operationId: updateDocument
+      parameters:
+        - name: doctype
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Update response
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      summary: Delete a document
+      operationId: deleteDocument
+      parameters:
+        - name: doctype
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Delete response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/method/{dotted_path}:
+    get:
+      summary: Call a whitelisted Python method (read-only)
+      operationId: callMethodGet
+      parameters:
+        - name: dotted_path
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Method response
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Call a whitelisted Python method (state-changing)
+      operationId: callMethodPost
+      parameters:
+        - name: dotted_path
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Method response
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: "token <api_key>:<api_secret>"
+security:
+  - apiKey: []
