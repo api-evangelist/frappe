@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Frappe Framework REST Method API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Method",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Login with username and password",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{site}/api/method/login",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Login with username and password"
+        },
+        {
+          "info": {
+            "name": "Get currently logged-in user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{site}/api/method/frappe.auth.get_logged_user"
+          },
+          "docs": "Get currently logged-in user"
+        },
+        {
+          "info": {
+            "name": "Upload a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{site}/api/method/upload_file",
+            "body": {
+              "type": "multipart-form",
+              "data": []
+            }
+          },
+          "docs": "Upload a file"
+        },
+        {
+          "info": {
+            "name": "Call a whitelisted Python method (read-only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{site}/api/method/:dotted_path",
+            "params": [
+              {
+                "name": "dotted_path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Call a whitelisted Python method (read-only)"
+        },
+        {
+          "info": {
+            "name": "Call a whitelisted Python method (state-changing)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{site}/api/method/:dotted_path",
+            "params": [
+              {
+                "name": "dotted_path",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Call a whitelisted Python method (state-changing)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
