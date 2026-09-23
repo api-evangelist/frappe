@@ -1,9 +1,9 @@
-aid: frappe:rest-rules
-name: Frappe Framework REST API Operational Rules
+x-aid: frappe:rest-rules
+x-name: Frappe Framework REST API Operational Rules
 description: >-
   Operational rules for working with the Frappe Framework REST API including
   authentication options, filtering syntax, pagination, and common pitfalls.
-modified: '2026-04-28'
+x-modified: '2026-04-28'
 rules:
   - id: authentication-required
     title: Authentication Required

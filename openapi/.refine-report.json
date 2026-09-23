@@ -1,8 +1,7 @@
 {
   "provider": "frappe",
   "sources": [
-    "frappe-method-api-openapi.yml",
-    "frappe-resource-api-openapi.yml"
+    "_ae-authored/frappe-openapi.yml"
   ],
   "outputs": [
     "frappe-method-api-openapi.yml",
@@ -11,6 +10,25 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "frappe-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "frappe-openapi.yml: tagged paths POST /api/method/login -> Method",
+    "frappe-openapi.yml: tagged paths GET /api/method/frappe.auth.get_logged_user -> Method",
+    "frappe-openapi.yml: tagged paths POST /api/method/upload_file -> Method",
+    "frappe-openapi.yml: tagged paths GET /api/resource/{doctype} -> Resource",
+    "frappe-openapi.yml: tagged paths POST /api/resource/{doctype} -> Resource",
+    "frappe-openapi.yml: tagged paths GET /api/resource/{doctype}/{name} -> Resource",
+    "frappe-openapi.yml: tagged paths PUT /api/resource/{doctype}/{name} -> Resource",
+    "frappe-openapi.yml: tagged paths DELETE /api/resource/{doctype}/{name} -> Resource",
+    "frappe-openapi.yml: tagged paths GET /api/method/{dotted_path} -> Method",
+    "frappe-openapi.yml: tagged paths POST /api/method/{dotted_path} -> Method",
+    "frappe-openapi.yml: declared missing tag: Method",
+    "frappe-openapi.yml: declared missing tag: Resource",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "frappe-method-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "frappe-resource-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
