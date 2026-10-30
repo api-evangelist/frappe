@@ -1,4 +1,4 @@
-# Frappe (frappe)
+# Frappe
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,131 @@
 
 Frappe is a fully featured, low-code web framework written in Python and JavaScript that powers ERPNext, the open-source ERP for accounting, inventory, payroll, and operations. The Frappe REST API auto-exposes every DocType for CRUD plus whitelisted Python method calls.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/apis.yml)
+**Areas:** Open Source · ERP · Accounting · Inventory · Payroll · Low-Code
 
-## Scope
+## Frappe on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Frappe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/frappe/](https://apis.io/providers/frappe/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Open Source
-- ERP
-- Accounting
-- Inventory
-- Payroll
-- Low Code
+- [Frappe Method API](https://apis.io/apis/frappe/frappe-method-api/) — The Method API from Frappe — 4 operation(s) for method.
+- [Frappe Resource API](https://apis.io/apis/frappe/frappe-resource-api/) — The Resource API from Frappe — 2 operation(s) for resource.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-06
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Frappe Framework REST API
+Model Context Protocol servers that expose the API to agents.
 
-Auto-generated REST API exposing every Frappe DocType for CRUD, filtered list queries, and whitelisted Python method calls. Powers Frappe and ERPNext integrations.
+- [MCP Server](https://apis.io/servers/frappe/mcp-server/)
 
-- **Human URL:** [https://docs.frappe.io/framework/user/en/api/rest](https://docs.frappe.io/framework/user/en/api/rest)
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- REST
-- DocTypes
-- CRUD
-- Methods
+- [Frappe Agentic Access](https://apis.io/agentic-access/frappe/frappe-agentic-access/)
 
-#### Properties
+#### Collections (3)
 
-- [OpenAPI](openapi/frappe-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/frappe.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/frappe.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Documentation](https://docs.frappe.io/framework/user/en/api/rest)
-- [Documentation](https://docs.frappe.io/framework/user/en/introduction)
-- [Capabilities](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/capabilities/frappe-rest-capabilities.yml)
-- [Rules](https://raw.githubusercontent.com/api-evangelist/frappe/refs/heads/main/rules/frappe-rest-rules.yml)
-- [Source Code](https://github.com/frappe/frappe)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Frappe Framework REST API](https://apis.io/collections/frappe/open-frappe/)
+- [Frappe Framework REST Method API](https://apis.io/collections/frappe/open-frappe-method-api/)
+- [Frappe Framework REST Method Resource API](https://apis.io/collections/frappe/open-frappe-resource-api/)
 
-- [LinkedIn](https://www.linkedin.com/company/frappe-technologies)
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Frappe — rest rules](https://apis.io/rules/frappe/frappe-rest-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Frappe Authentication](https://apis.io/security/frappe/frappe-authentication/)
+- [Frappe Domain Security](https://apis.io/security/frappe/frappe-domain-security/)
+- [Frappe Vulnerability Disclosure](https://apis.io/security/frappe/frappe-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Frappe Plans Pricing](https://apis.io/plans/frappe/frappe-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Frappe Rate Limits](https://apis.io/rate-limits/frappe/frappe-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Frappe Finops](https://apis.io/finops/frappe/frappe-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://frappe.io/)
 - [Documentation](https://docs.frappe.io/)
-- [GitHub Organization](https://github.com/frappe)
-- [Source Code](https://github.com/frappe/frappe)
-- [Source Code](https://github.com/frappe/erpnext)
-- [Integrations](https://frappe.io/partners)
-- [M C P Server](https://github.com/frappe/mcp)
+- [Blog](https://frappe.io/rss.xml)
+- [GitHub](https://github.com/frappe)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.7 |
+| Contract quality | 39.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 21.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/frappe/](https://apis.io/providers/frappe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Frappe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/frappe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
